@@ -59,28 +59,26 @@
                     <p class="link">Check out code on <a href="https://github.com/JanVanCau/first-names/blob/1890f6e21f40cc2119914e75111a46a16e8a474d/first-names-8.ipynb" 
                         target="_blank">GitHub</a></p>
         
-                    <p class="description">I downloaded the csv files on first names from the website of <a href="https://statbel.fgov.be/nl/themas/bevolking/namen-en-voornamen/voornamen-van-meisjes-en-jongens"
-                        target="Blank">Statbel</a>, the Belgian statistical office. They contain all first names of newborns with a frequency of 5 or more, with tables for 
-                        each year from <strong>1995</strong> up to and including <strong>2023</strong>. There are separate files for boys and girls.</p>
+                    <p class="description">I downloaded CSV files containing first-name data from <a href="https://statbel.fgov.be/nl/themas/bevolking/namen-en-voornamen/voornamen-van-meisjes-en-jongens"
+                        target="Blank">Statbel</a>, the Belgian statistical office. These files include all newborn names with a frequency of five or more, with separate datasets for boys and girls, covering 
+                        each year from <strong>1995</strong> to <strong>2023</strong>.</p>
                 
-                    <p class="description">Upon performing data cleaning and organization on the year tables, I merged them into one, with a 
-                        column for each year. I  then constructed a <strong>time series forecasting model</strong> for each name. I used <strong>polynomials</strong> 
-                        and <strong>Fourier terms</strong> on the time steps to model the long-term trend and seasonality. For short term cycles 
-                        and variability I added <strong>lag terms</strong>. I added <strong>XGBoost</strong> to model the error terms, but noticed that 
-                        for some names it led to overfitting.</p>
+                    <p class="description">Upon performing data cleaning and organization on the year tables, I merged them into one, with a column for each year. I  then constructed a <strong>time series forecasting 
+                        model</strong> for each name. To capture long-term trends and seasonality, I incorporated <strong>polynomial</strong> and <strong>Fourier terms</strong>. For short-term fluctuations and 
+                        variability, I added <strong>lag terms</strong>. Additionally, I used <strong>XGBoost</strong> to model residual errors, though I found it led to overfitting for some names.</p>
 
-                    <p class="description"> I used the 1995-2020 period as training data and the 2021-2023 period as validation data. I performed a grid search to find, for each separate name, 
-                        the optimal polynomial degree, number of Fourier terms, number of lag terms and whether or not to model the error terms. I achieved a good fit, with a 
-                        <strong>median RMSE of 2.858</strong> for girls' names and <strong>3.367</strong> for boys' names.</p>
+                    <p class="description">I trained the model on data from 1995 to 2020 and validated it using the 2021–2023 period. To optimize the model for each name, I performed a grid search to determine the 
+                        best polynomial degree, number of Fourier and lag terms, and whether to include error modeling. The model achieved a strong fit, with a <strong>median RMSE</strong> of <strong>2.858</strong> 
+                        for girls' names and <strong>3.367</strong> for boys' names.</p>
                     
                     <div class="imagerow" style="margin-bottom:30px">
                         <img src="forecast_emma.png" style="width:45%; margin-right: 40px;">
                         <img src="forecast_dounia.png" style="width:45%;">
                     </div>
 
-                    <p class="description">According to the model, there will be some interesting evolutions in the Top 5 in 2024! <strong>Olivia</strong> will stay on top in 
-                        the girls' names, but <strong>Alba</strong> will gain a lot in popularity and achieve 2nd place. In the boys' category, a new winner will emerge: 
-                        <strong>Adam</strong> will rise from position 4 to position 1. <strong>Louis</strong> will drop out of the Top 5, to be replaced by <strong>Tiago</strong>.</p>
+                    <p class="description">AAccording to the forecasts, 2024 will bring some interesting shifts in the Top 5 names! <strong>Olivia</strong> will remain the most popular girls' name, while 
+                        <strong>Alba</strong> will see a surge in popularity, reaching second place. In the boys' category, a new leader will emerge — <strong>Adam</strong> will jump from fourth to first place. 
+                        Meanwhile, <strong>Louis</strong> will drop out of the Top 5, making way for <strong>Tiago</strong>.</p>
         
                     <div class="imagerow">
                         <img src="forecast_boys.png" style="width:45%; margin-right: 40px;">
@@ -92,15 +90,12 @@
                     <p class="title">Kaggle competition: Binary Prediction with a Rainfall Dataset</p>
                     <p class="link">Check out code on <a href="https://www.kaggle.com/code/janvancauwenberghe/rainfall-1" target="_blank">Kaggle</a></p>
                     
-                    <p class="description">The goal of this competition was to predict rainfall based on meteorological parameters such as 
-                        temperature, dewpoint, pressure and windspeed. Submissions were evaluated on area under ROC curve. My model achieved 
-                        a score of <strong>0.89890</strong> on the test data, which placed me at no. <strong>438</strong> out of 4381 
-                        submissions.</p>
+                    <p class="description">The goal of this competition was to predict rainfall based on meteorological parameters such as temperature, dewpoint, pressure and windspeed. Submissions were evaluated 
+                        using the area under the ROC curve (AUC). My model achieved a test score of <strong>0.89890</strong>, ranking <strong>438th</strong> out of 4,381 submissions.</p>
         
-                    <p class="description">My first step consisted of exploratory data analysis (EDA), which showed the importance of the 
-                        humidity, cloud and sunshine features. I then explored multiple <strong>machine learning models</strong>, applying 
-                        the Optuna framework on each of them for hyperparameter optimization. Finally, I constructed a voting model to act 
-                        as an ensemble learner, combining the predictions of the separate models.</p>
+                    <p class="description">I began with exploratory data analysis (EDA), which highlighted the significance of humidity, cloud cover, and sunshine as key features. Next, I explored multiple 
+                        <strong>machine learning models</strong>, using the Optuna framework for hyperparameter optimization. Finally, I built a voting model as an ensemble learner, combining predictions from individual 
+                        base models to improve overall performance.</p>
         
                     <div class="imagerow">
                         <img src="pairplot.png" style="width:55%; height:auto; margin-right: 30px;">
@@ -115,10 +110,8 @@
                     <p class="title">Python exercise: Sudoku Solver</p>
                     <p class="link">Check out code on <a href="https://github.com/JanVanCau/sudoku/tree/main" target="_blank">GitHub</a></p>
         
-                    <p class="description">Not what you'd call data science exactly, but a great exercise in logical thinking and 
-                        Python programming! And some extra HTML skills thrown in for good measure. I created a Python script that 
-                        solves sudokus and made a Sudoku Solver website so that everyone can have a go at it. Check out the website 
-                        <a href="https://www.janvancau.com" target="_blank">here</a>.</p>
+                    <p class="description">Not exactly data science, but a great exercise in logical thinking, Python programming, and even a fair bit of HTML! I developed a Python script to solve Sudoku puzzles and 
+                        built a Sudoku Solver website, allowing anyone to try it out. Check it out <a href="https://www.janvancau.com" target="_blank">here</a>!</p>
         
                     <img src="sudoku.png" style="width:80%; margin-bottom: 40px;">
                 </div>
