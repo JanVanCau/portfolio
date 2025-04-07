@@ -4,22 +4,22 @@
     <head>
 
         <title>Portfolio</title>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/png" href="portfolio.png">
-        <link rel="stylesheet" href="styles/text.css">
+        <link rel="icon" type="image/png" href="images/portfolio.png">
+        <link rel="stylesheet" href="styles/text_new.css">
 
     </head>
 
     <body style="min-height: 200vh">
 
         <div class="header">
-            <div style="width:350px">
+            <div class="name">
                 <p class="title_header">Jan Van Cauwenberghe</p>
             </div>
-            <div style="width:900px; justify-content:flex-start;  margin-left:40px;">
+            <div class="title">
                 <p class="title_header">Data Science Portfolio</p>
             </div>
         </div>
@@ -28,34 +28,34 @@
 
             <div class="sidebar">
 
-                <img src="picture2c.png" style="width:65%; border-radius: 150px; margin-top: 23px;">
+                <img class="profilepic" src="images/profile.png">
     
                 <div>
-                    <p class="description" style="margin-top: 40px; margin-bottom: 30px;">
-                        <a href="CV_NL.pdf" target="_blank">Resume</a> |
-                        <a href="https://www.linkedin.com/in/jan-van-cauwenberghe-a079987/" target="_blank">LinkedIn</a> |
-                        <a href="https://github.com/janvancau" target="_blank">GitHub</a>
-                    </p>
+                    <p class="description" style="margin-top: 40px; margin-bottom: 0; text-align:center;"> <a href="CV NL.pdf" target="_blank">CV (NL)</a> | 
+                        <a href="CV ENG.pdf" target="_blank">CV (ENG)</a> </p>
+                    <p class="description" style="margin-top: 10px; margin-bottom: 30px; text-align:center;"> 
+                        <a href="https://www.linkedin.com/in/jan-van-cauwenberghe-a079987/" target="_blank">LinkedIn</a> | 
+                        <a href="https://github.com/janvancau" target="_blank">GitHub</a> </p>
                 </div>
     
-                <div style="width:65%">
+                <div>
                     <p class="description">
-                        Civil engineer in aerospace engineering with a 15+ year career in policy & government. Passionate about numbers and 
-                        technology. Looking out for a new challenge in the world of data science, machine learning, and AI.
+                        Aerospace engineer with a 15+ year career in policy & government. Passionate about numbers and 
+                        technology. Looking out for a new challenge in the domains of data science, machine learning, and AI.
                     </p>
-                    <p class="description" style="padding-bottom: 200px;">
+                    <p class="description" style="padding-bottom: 20px;">
                         Strong analytical and problem-solving skills, excellent interpersonal and communication abilities, and accustomed 
                         to working in a high-pressure environment. Flexible and a fast learner. And last but not least, immensely motivated 
-                        to fully immerse myself in this ‘brave’ new world of data.
+                        to dive headfirst into the ‘brave’ new world of data.
                     </p>
                 </div>
-    
+
             </div>
     
-            <div style="width:900px; margin-left:390px; margin-top: 80px">
+            <div class="projects">
     
                 <div style="border-bottom: 1px dashed rgb(78, 78, 187)">
-                    <p class="title" style="margin-top: 13px;">Predictive time series model on Naming Trends in Belgium</p>
+                    <p class="project_title" style="margin-top: 13px;">Predictive time series model on Naming Trends in Belgium</p>
                     <p class="link">Check out code on <a href="https://github.com/JanVanCau/first-names/blob/1890f6e21f40cc2119914e75111a46a16e8a474d/first-names-8.ipynb" 
                         target="_blank">GitHub</a></p>
         
@@ -72,8 +72,8 @@
                         for girls' names and <strong>3.367</strong> for boys' names.</p>
                     
                     <div class="imagerow" style="margin-bottom:30px">
-                        <img src="forecast_emma.png" style="width:45%; margin-right: 40px;">
-                        <img src="forecast_dounia.png" style="width:45%;">
+                        <img src="images/forecast_emma.png">
+                        <img src="images/forecast_dounia.png">
                     </div>
 
                     <p class="description">According to the forecasts, 2024 will bring some interesting shifts in the Top 5 names! <strong>Olivia</strong> will remain the most popular girls' name, while 
@@ -81,13 +81,13 @@
                         Meanwhile, <strong>Louis</strong> will drop out of the Top 5, making way for <strong>Tiago</strong>.</p>
         
                     <div class="imagerow">
-                        <img src="forecast_boys.png" style="width:45%; margin-right: 40px;">
-                        <img src="forecast_girls.png" style="width:45%;"> 
+                        <img src="images/forecast_boys.png">
+                        <img src="images/forecast_girls.png"> 
                     </div>
                 </div>
         
                 <div style="border-bottom: 1px dashed rgb(78, 78, 187)">
-                    <p class="title">Kaggle competition: Binary Prediction with a Rainfall Dataset</p>
+                    <p class="project_title">Kaggle competition: Binary Prediction with a Rainfall Dataset</p>
                     <p class="link">Check out code on <a href="https://www.kaggle.com/code/janvancauwenberghe/rainfall-1" target="_blank">Kaggle</a></p>
                     
                     <p class="description">The goal of this competition was to predict rainfall based on meteorological parameters such as temperature, dewpoint, pressure and windspeed. Submissions were evaluated 
@@ -97,25 +97,22 @@
                         <strong>machine learning models</strong>, using the Optuna framework for hyperparameter optimization. Finally, I built a voting model as an ensemble learner, combining predictions from individual 
                         base models to improve overall performance.</p>
         
-                    <div class="imagerow">
-                        <img src="pairplot.png" style="width:55%; height:auto; margin-right: 30px;">
-                        <div class="imagecol" style="width:35%;">
-                            <img src="flowchart.png" style="flex:1; margin-bottom: 20px;">
-                            <img src="rainfall.png" style="flex:1;">
-                        </div>
+                    <div class="final_imagerow">
+                        <img class="pairplot" src="images/pairplot.png">
+                        <img class="flowchart_duck" src="images/flowchart & duck.png">
                     </div>
                 </div>
 
                 <div>
-                    <p class="title">Python exercise: Sudoku Solver</p>
+                    <p class="project_title">Python exercise: Sudoku Solver</p>
                     <p class="link">Check out code on <a href="https://github.com/JanVanCau/sudoku/tree/main" target="_blank">GitHub</a></p>
         
                     <p class="description">Not exactly data science, but a great exercise in logical thinking, Python programming, and even a fair bit of HTML! I developed a Python script to solve Sudoku puzzles and 
                         built a Sudoku Solver website, allowing anyone to try it out.</p>
 
-                    <p class="description">Having a hard time with your Sudoku? Check out the website and solve it <a href="https://www.janvancau.com" target="_blank">here</a>!</p>
+                    <p class="description">Having a hard time with your Sudoku? Check out the website and solve it <a href="https://sudoku.janvancau.com" target="_blank">here</a>!</p>
                     
-                    <img src="sudoku.png" style="width:80%; margin-top:30px; margin-bottom: 40px;">
+                    <img src="images/sudoku.png" style="width:90%; margin-top:30px; margin-bottom: 40px;">
                 </div>
 
         </div>
