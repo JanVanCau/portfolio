@@ -11,8 +11,7 @@ body, html{
 
 p{
     font-family: "Nunito", sans-serif;
-    text-align: justify;
-    line-height: 25px;}
+    text-align: justify;}
 
 .header{
     display: grid;
@@ -159,12 +158,12 @@ p{
     font-size: 16px;
     color: rgb(96,96,96);
     margin-right: 40px;
-    margin-bottom: 20px;}    
+    margin-bottom: 45px;}    
 
 .description{
     font-size: 16px;
     color: rgb(96,96,96);
-    line-height: 18px;
+    line-height: 23px;
     margin-bottom: 20px;}
 
 .imagerow, .final_imagerow{
