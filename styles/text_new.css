@@ -11,7 +11,8 @@ body, html{
 
 p{
     font-family: "Nunito", sans-serif;
-    text-align: justify;}
+    text-align: justify;
+    line-height: 25px;}
 
 .header{
     display: grid;
